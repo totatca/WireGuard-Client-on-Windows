@@ -1,0 +1,19 @@
+
+
+[Interface]
+Address = Range_IP_VPN
+
+[Peer]
+###Public of the WireGuard VPN Server
+PublicKey = Public_key_of_the_WireGuard_Server
+
+### IP and Port of the WireGuard VPN Server
+Endpoint = IP_of_the_WireGuard_Server:Port_VPN_of_the_Server
+
+### Allow all traffic
+AllowedIPs = 0.0.0.0/0
+
+
+*** On WireGuard VPN Server
+
+	wg set wg0 peer PublicKey_of_the_Client allowed-ips IP_VPN_of_the_Client
